@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:WeatherApp.ViewModels"
+             xmlns:models="clr-namespace:WeatherApp.Models"
+             x:DataType="viewmodels:WeatherViewModel"
+             x:Class="WeatherApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="10">
+
+
+            <Label Text="Enter City:"
+                   FontSize="Medium"/>
+
+
+            <Entry Placeholder="e.g., London, Tokyo"
+                   Text="{Binding City}"
+                   ReturnCommand="{Binding LoadWeatherCommand}"
+                   IsEnabled="{Binding IsNotLoading}"
+                   x:Name="CityEntry"/>
+
+            <ListView ItemsSource="{Binding Suggestions}"
+                      IsVisible="{Binding IsSuggestionListVisible}"
+                      HeightRequest="150"
+                      BackgroundColor="Transparent"
+                      Margin="0,-5,0,5"
+                      CachingStrategy="RecycleElement"
+                      SelectionMode="None">
+
+
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:LocationSuggestion">
+                        <ViewCell>
+                            <StackLayout Padding="10, 5">
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:WeatherViewModel}}, Path=SelectSuggestionCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="{Binding DisplayName}"
+                                       FontSize="16"
+                                       TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Get Weather"
+                    Command="{Binding LoadWeatherCommand}"
+                    IsEnabled="{Binding IsNotLoading}"
+                    Margin="0,5,0,0"/>
+
+
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                               Color="{AppThemeBinding Light={StaticResource Primary}, Dark=White}"
+                               HorizontalOptions="Center"/>
+
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   IsVisible="{Binding HasError}"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,10,0,0"/>
+
+
+            <Frame Padding="15"
+                   CornerRadius="10"
+                   BorderColor="{AppThemeBinding Light=LightGray, Dark=Gray}"
+                   IsVisible="{Binding HasData}"
+                   Margin="0,10,0,0">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label FontSize="Large"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Weather in "/>
+                                <Span Text="{Binding WeatherData.LocationName}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Image Source="{Binding WeatherData.IconUrl}"
+                           HeightRequest="80"
+                           WidthRequest="80"
+                           HorizontalOptions="Center"
+                           Aspect="AspectFit">
+                        <Image.Triggers>
+                            <DataTrigger TargetType="Image"
+                                         Binding="{Binding WeatherData.IconUrl}"
+                                         Value="{x:Null}">
+                                <Setter Property="IsVisible"
+                                        Value="False"/>
+                            </DataTrigger>
+                        </Image.Triggers>
+                    </Image>
+
+                    <Label FontSize="Header"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding WeatherData.TemperatureDisplay}"/>
+                                <Span Text=" - "/>
+                                <Span Text="{Binding WeatherData.Conditions}"
+                                      FontAttributes="Italic"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          RowDefinitions="Auto, Auto"
+                          ColumnSpacing="10"
+                          RowSpacing="5"
+                          Margin="0,10,0,0">
+                        <Label Text="Humidity:"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               HorizontalTextAlignment="End"
+                               FontAttributes="Bold"/>
+                        <Label Text="{Binding WeatherData.HumidityDisplay}"
+                               Grid.Row="0"
+                               Grid.Column="1"/>
+
+                        <Label Text="Wind Speed:"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               HorizontalTextAlignment="End"
+                               FontAttributes="Bold"/>
+                        <Label Text="{Binding WeatherData.WindSpeedDisplay}"
+                               Grid.Row="1"
+                               Grid.Column="1"/>
+                    </Grid>
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
