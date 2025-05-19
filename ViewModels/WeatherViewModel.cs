@@ -20,7 +20,13 @@ namespace WeatherApp.ViewModels
         [NotifyPropertyChangedFor(nameof(IsNotLoading))]
         private bool _isLoading;
 
-      
+        [ObservableProperty]
+        private double _latitude;
+
+        [ObservableProperty]
+        private double _longitude;
+
+
         private string _city = ""; 
         public string City
         {
@@ -184,25 +190,26 @@ namespace WeatherApp.ViewModels
         }
 
        
-        [RelayCommand]
+       [RelayCommand]
         private void SelectSuggestion(LocationSuggestion? selectedSuggestion)
         {
             if (selectedSuggestion != null)
             {
-                
-                _city = selectedSuggestion.DisplayName; 
-             
+                _city = selectedSuggestion.DisplayName;
+                OnPropertyChanged(nameof(City));
 
-                OnPropertyChanged(nameof(City)); 
+                // Update map coordinates
+                Latitude = selectedSuggestion.Lat;
+                Longitude = selectedSuggestion.Lon;
 
                 Suggestions.Clear();
                 IsSuggestionListVisible = false;
                 OnPropertyChanged(nameof(HasSuggestions));
 
                 LoadWeatherCommand.Execute(selectedSuggestion.DisplayName);
-                
             }
         }
+
         
     }
 }

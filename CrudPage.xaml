@@ -3,17 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeatherApp.CrudPage">
 
-    <VerticalStackLayout Padding="20"
-                         Spacing="10">
-        <Label HorizontalOptions="Center"
-               Text="Utilizing SQLite"
-               FontSize="20"/>
-        <Button BackgroundColor="Green"
-                TextColor="White"
-                Text="Add User"
-                Clicked="OnAddUserClicked"/>
-        <Button Text="Show Users"
-                Clicked="OnShowUsersClicked"/>
-    </VerticalStackLayout>
+        <VerticalStackLayout Padding="20"
+                             Spacing="10">
+                <Label HorizontalOptions="Center"
+                       Text="Utilizing SQLite"
+                       FontSize="20"/>
+                <Button BackgroundColor="Green"
+                        TextColor="White"
+                        Text="Add User"
+                        Clicked="OnAddUserClicked"/>
+                <Button Text="Show Users"
+                        BackgroundColor="Blue"
+                        TextColor="White"
+                        Clicked="OnShowUsersClicked"/>
+        </VerticalStackLayout>
 
 </ContentPage>

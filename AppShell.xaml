@@ -21,5 +21,7 @@
         ContentTemplate="{DataTemplate local:TodoList}"
         Route="TodoList"/>
 
+    <MenuItem Text="Toggle Dark/Light Mode" Clicked="OnToggleThemeClicked"/>
+
 
 </Shell>

@@ -436,7 +436,7 @@ target triple = "x86_64-unknown-linux-android21"
 		ptr @__compressedAssemblyData_82; uint8_t* data
 	}, ; 82: Xamarin.KotlinX.Serialization.Core.Jvm
 	%struct.CompressedAssemblyDescriptor {
-		i32 478720, ; uint32_t uncompressed_file_size
+		i32 483840, ; uint32_t uncompressed_file_size
 		i1 false, ; bool loaded
 		ptr @__compressedAssemblyData_83; uint8_t* data
 	}, ; 83: WeatherApp
@@ -740,7 +740,7 @@ target triple = "x86_64-unknown-linux-android21"
 @__compressedAssemblyData_80 = internal dso_local global [85504 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_81 = internal dso_local global [17408 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_82 = internal dso_local global [88576 x i8] zeroinitializer, align 16
-@__compressedAssemblyData_83 = internal dso_local global [478720 x i8] zeroinitializer, align 16
+@__compressedAssemblyData_83 = internal dso_local global [483840 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_84 = internal dso_local global [24064 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_85 = internal dso_local global [14848 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_86 = internal dso_local global [9216 x i8] zeroinitializer, align 16

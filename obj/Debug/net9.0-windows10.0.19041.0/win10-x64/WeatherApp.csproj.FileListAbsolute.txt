@@ -328,6 +328,10 @@ D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Micr
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
+D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
+D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
+D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -365,6 +369,7 @@ D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\zh-H
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\WebView2Loader.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
+D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
 D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Web.WebView2.Core.Projection.dll
@@ -448,6 +453,7 @@ D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\maui
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WeatherApp.AssemblyInfoInputs.cache
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WeatherApp.AssemblyInfo.cs
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WeatherApp.csproj.CoreCompileInputs.cache
+D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WeatherApp.sourcelink.json
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WeatherApp.csproj.Up2Date
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WeatherApp.dll
@@ -470,9 +476,3 @@ D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\pri.
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
-D:\MobileApp\Maui\WeatherApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WeatherApp.sourcelink.json
-D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
-D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
-D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
-D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
-D:\MobileApp\Maui\WeatherApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll

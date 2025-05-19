@@ -23,7 +23,8 @@
                       Clicked="OnUpdateUserClicked"/>
 
               <Button Text="Cancel"
-                      Clicked="OnCancelClicked"/>
+                      Clicked="OnCancelClicked"
+                      BackgroundColor="DarkRed"/>
        </VerticalStackLayout>
 
 </ContentPage>

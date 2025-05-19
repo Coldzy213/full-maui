@@ -1,4 +1,3 @@
-
 using System.Text.Json.Serialization;
 
 namespace WeatherApp.Models
@@ -12,9 +11,14 @@ namespace WeatherApp.Models
         public string Country { get; set; } = string.Empty;
 
         [JsonPropertyName("state")]
-        public string? State { get; set; } 
+        public string? State { get; set; }
 
-        
+        [JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        [JsonPropertyName("lon")]
+        public double Lon { get; set; }
+
         public string DisplayName => $"{Name}, {(string.IsNullOrEmpty(State) ? Country : $"{State}, {Country}")}";
     }
 }

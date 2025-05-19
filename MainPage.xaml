@@ -19,7 +19,8 @@
                    Text="{Binding City}"
                    ReturnCommand="{Binding LoadWeatherCommand}"
                    IsEnabled="{Binding IsNotLoading}"
-                   x:Name="CityEntry"/>
+                   x:Name="CityEntry"
+                   Background="Gray"/>
 
             <ListView ItemsSource="{Binding Suggestions}"
                       IsVisible="{Binding IsSuggestionListVisible}"
@@ -52,7 +53,9 @@
             <Button Text="Get Weather"
                     Command="{Binding LoadWeatherCommand}"
                     IsEnabled="{Binding IsNotLoading}"
-                    Margin="0,5,0,0"/>
+                    Margin="0,5,0,0"
+                    BackgroundColor="Orange"
+                    TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
 
 
             <ActivityIndicator IsRunning="{Binding IsLoading}"
@@ -139,6 +142,11 @@
 
                 </VerticalStackLayout>
             </Frame>
+
+
+            <WebView x:Name="osmWebView"
+                     HeightRequest="400"
+                     VerticalOptions="FillAndExpand"/>
 
         </VerticalStackLayout>
     </ScrollView>
