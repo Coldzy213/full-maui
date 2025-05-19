@@ -1,0 +1,4 @@
+D:\MobileApp\Maui\WeatherApp\bin\Release\net9.0-android\publish\com.companyname.weatherapp-Signed.aab
+D:\MobileApp\Maui\WeatherApp\bin\Release\net9.0-android\publish\com.companyname.weatherapp.aab
+D:\MobileApp\Maui\WeatherApp\bin\Release\net9.0-android\publish\com.companyname.weatherapp-Signed.apk
+D:\MobileApp\Maui\WeatherApp\bin\Release\net9.0-android\publish\_Microsoft.Android.Resource.Designer.dll

@@ -10,6 +10,16 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage"/>
+    <ShellContent
+        Title="CRUD"
+        ContentTemplate="{DataTemplate local:CrudPage}"
+        Route="CrudPage"/>
+
+    <ShellContent
+        Title="Todo List"
+        ContentTemplate="{DataTemplate local:TodoList}"
+        Route="TodoList"/>
+
 
 </Shell>

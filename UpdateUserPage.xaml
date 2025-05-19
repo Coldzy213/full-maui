@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.UpdateUserPage">
+
+       <VerticalStackLayout Padding="20"
+                            Spacing="10">
+              <Label HorizontalOptions="Center"
+                     Text="Update User"
+                     FontSize="20"
+                     FontAttributes="Bold"/>
+
+              <Entry x:Name="NameEntry"
+                     Placeholder="Enter new name"/>
+
+              <Entry x:Name="EmailEntry"
+                     Placeholder="Enter new email"
+                     Keyboard="Email"/>
+
+              <Button Text="Update"
+                      BackgroundColor="Blue"
+                      TextColor="White"
+                      Clicked="OnUpdateUserClicked"/>
+
+              <Button Text="Cancel"
+                      Clicked="OnCancelClicked"/>
+       </VerticalStackLayout>
+
+</ContentPage>

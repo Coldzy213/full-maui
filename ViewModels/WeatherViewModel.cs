@@ -199,7 +199,6 @@ namespace WeatherApp.ViewModels
                 IsSuggestionListVisible = false;
                 OnPropertyChanged(nameof(HasSuggestions));
 
-             
                 LoadWeatherCommand.Execute(selectedSuggestion.DisplayName);
                 
             }

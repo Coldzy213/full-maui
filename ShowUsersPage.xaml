@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.ShowUsersPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="10">
+            <Label Text="Users List"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+
+            <ListView x:Name="UsersListView"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5"
+                                  ColumnSpacing="10">
+                                <!-- Define Columns -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- User Info -->
+                                <StackLayout Grid.Column="0"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"
+                                           FontAttributes="Bold"
+                                           FontSize="16"/>
+                                    <Label Text="{Binding Email}"
+                                           FontSize="13"
+                                           TextColor="Gray"/>
+                                </StackLayout>
+
+                                <!-- Buttons -->
+                                <StackLayout Grid.Column="1"
+                                             Orientation="Horizontal"
+                                             HorizontalOptions="End"
+                                             Spacing="5">
+                                    <Button Text="✏️"
+                                            WidthRequest="40"
+                                            HeightRequest="40"
+                                            BackgroundColor="Orange"
+                                            TextColor="White"
+                                            FontSize="14"
+                                            CornerRadius="20"
+                                            Clicked="OnUpdateUserClicked"
+                                            CommandParameter="{Binding .}"/>
+                                    <Button Text="🗑️"
+                                            WidthRequest="40"
+                                            HeightRequest="40"
+                                            BackgroundColor="Red"
+                                            TextColor="White"
+                                            FontSize="14"
+                                            CornerRadius="20"
+                                            Clicked="OnDeleteUserClicked"
+                                            CommandParameter="{Binding .}"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Button Text="Back"
+                    Clicked="OnBackClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
